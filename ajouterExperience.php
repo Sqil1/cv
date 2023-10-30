@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 require_once 'database.php';
 
 $errors = [];
@@ -41,8 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $insterExperience->bindParam(':date_fin', $dateFin);
 
             $insterExperience->execute();
+
             header("Location: " . $_SERVER['PHP_SELF']);
-            die();
+            exit();
         }
     }
 }
@@ -60,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ?>
         </ul>
         <div class="">
-            <label for="poste">Nom</label>
+            <label for="poste">Poste</label>
             <input type="text" id="poste" name="poste" value="<?= $poste ?>"></div>
         <div class="">
             <label for="employeur">Employeur</label>

@@ -8,3 +8,4 @@
 function isUserAuthenticated() {
     return isset($_SESSION['user']); // Vérifiez si l'utilisateur est authentifié
 }
+

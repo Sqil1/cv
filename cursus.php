@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 require_once './database.php';
 // On récupère tout le contenu de la table experience
 $bdd = connect();
@@ -29,6 +29,13 @@ try {
                 <div>
                     <span class="icon-calendar"></span><?= $cursu['date_debut']; ?> - <?= $cursu['date_fin']; ?>
                 </div>
+                <?php if (isUserAuthenticated() && basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
+                    <a href="confirm_modify.php?id=<?= $cursu['id']; ?>">Modifier</a>
+                    <form method="post" action="deleteCursus.php">
+                        <input type="hidden" name="id" value="<?= $cursu['id']; ?>">
+                        <button type="submit" name="confirm_delete">Supprimer</button>
+                    </form>
+                <?php endif; ?>
             </div>
         </li>
         <?php endforeach;?>

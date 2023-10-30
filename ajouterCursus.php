@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 require_once 'database.php';
 
 $errors = [];
@@ -10,7 +10,6 @@ $dateDebut = null;
 $dateFin = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    //si les champs sont vides
     if (isset($_POST['submitCursus'])) {
         $diplome = $_POST['diplome'];
         $ecole = $_POST['ecole'];
@@ -43,7 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $insterCursus->execute();
 
-            die();
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit();
         }
     }
 }
