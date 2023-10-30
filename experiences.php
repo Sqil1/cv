@@ -2,7 +2,7 @@
 ob_start();
 require_once 'database.php';
 require_once 'functions.php';
-// On récupère tout le contenu de la table experience
+
 $bdd = connect();
 
 try {
@@ -46,7 +46,19 @@ try {
                         - <?= ($experience['date_fin'] == '0000-00-00') ? "AUJOURD'HUI" : $date_fin; ?>
                     </div>
                     <?php if (isUserAuthenticated() && basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
-                    <a href="confirm_modify.php?id=<?= $experience['id']; ?>">Modifier</a>
+                        <form method="post" action="modifyExperience.php?id=<?= $experience['id']; ?>">
+                            <label for="new_poste">Nouveau Poste :</label>
+                            <input type="text" name="new_poste" id="new_poste" value="<?= $experience['poste']; ?>">
+                            <label for="new_employeur">Nouvel Employeur :</label>
+                            <input type="text" name="new_employeur" id="new_employeur" value="<?= $experience['employeur']; ?>">
+                            <label for="new_description">Nouvelle Description :</label>
+                            <textarea name="new_description" id="new_description"><?= $experience['description']; ?></textarea>
+                            <label for="new_date_debut">Nouvelle Date de Début :</label>
+                            <input type="date" name="new_date_debut" id="new_date_debut" value="<?= $experience['date_debut']; ?>">
+                            <label for="new_date_fin">Nouvelle Date de Fin :</label>
+                            <input type="date" name="new_date_fin" id="new_date_fin" value="<?= $experience['date_fin']; ?>">
+                            <input type="submit" value="Modifier l'expérience">
+                        </form>
                         <form method="post" action="deleteExperience.php">
                             <input type="hidden" name="id" value="<?= $experience['id']; ?>">
                             <button type="submit" name="confirm_delete">Supprimer</button>
