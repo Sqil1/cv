@@ -1,0 +1,330 @@
+@font-face {
+    font-family: "roboto";
+    src: url(Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: "roboto-medium";
+    src: url(Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "roboto-regular";
+    src: url(Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('icomoon/fonts/icomoon.eot?68l8gk');
+    src: url('icomoon/fonts/icomoon.eot?68l8gk#iefix') format('embedded-opentype'),
+    url('icomoon/fonts/icomoon.ttf?68l8gk') format('truetype'),
+    url('icomoon/fonts/icomoon.woff?68l8gk') format('woff'),
+    url('icomoon/fonts/icomoon.svg?68l8gk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+
+body {
+    font-family: "roboto-regular";
+}
+
+header {
+
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #47474781;
+    height: 64px;
+}
+
+.adress-top {
+    margin-left: 15%;
+    color: #ffffff;
+    font-size: 1.7em;
+    font-family: "roboto";
+}
+
+nav ul {
+    list-style-type: none;
+    font-family: "roboto-medium";
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: #ffffff;
+    padding: 14px 16px;
+}
+
+
+#home {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.295), #0008), no-repeat center center /cover url("img/img-top3.jpg");
+    background-attachment: fixed;
+    height: 700px;
+    font-family: "roboto";
+    border: 0.1px solid black;
+
+}
+
+.name-home {
+    color: #ffffff;
+    font-size: 2em;
+    margin-top: 50px;
+
+
+}
+
+.contain-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+#img-profil {
+    background: url("img/img-profil.jpg") no-repeat center center /cover;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 260px;
+    width: 260px;
+    height: 260px;
+    border: 2px solid #ffffff;
+}
+
+.img-260px {
+    width: 260px;
+    height: 255px;
+}
+
+.name-home h1 {
+    font-size: 2em;
+
+}
+
+.social-link {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.social-link imgs {
+    padding: 14px 14px;
+}
+
+
+#profil {
+
+}
+
+.container-profil {
+    display: flex;
+}
+
+.coordonees {
+    min-width: 30%;
+    padding: 50px;
+    background-color: #474747d8;
+    color: #ffffff;
+    font-size: 15px;
+    margin: auto;
+}
+
+.width-100 {
+    width: 100px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.a-propos {
+    min-width: 200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.title {
+    padding: 50px;
+    background: #47474717;
+}
+
+/* FONT ICON */
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-office:before {
+    content: "\e903";
+    font-size: 32px;
+    margin-right: 5px;
+
+}
+
+.icon-pen:before {
+    content: "\e908";
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.icon-calendar:before {
+    content: "\e953";
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+/* EXPERIENCE */
+
+.container-experience {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+}
+
+.experience {
+    width: 50%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.align-item-center {
+    vertical-align: text-top;
+}
+
+.container-experience li {
+    width: 100%;
+    display: flex;
+
+}
+
+.container-experience li:nth-child(2n) {
+
+    justify-content: flex-end;
+}
+
+.container-experience li:nth-child(2n+1) {
+
+    text-align: right;
+}
+
+.container-experience:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: #47474717;
+}
+
+
+.experience h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* CURSUS */
+
+.container-cursus {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+}
+
+.cursus {
+    width: 50%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-cursus li {
+    width: 100%;
+    display: flex;
+
+}
+
+.container-cursus li:nth-child(2n+1) {
+
+    justify-content: flex-end;
+}
+
+.container-cursus li:nth-child(2n) {
+
+    text-align: right;
+}
+
+.container-cursus:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: #47474717;
+}
+
+.cursus h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#from {
+    display: flex;
+    justify-content: center;
+
+}
+
+.from-box {
+    width: 50%;
+}
+
+/*contact*/
+
+.error-sendmail {
+    color: red;
+}
+
+.success-sendmail {
+    color: red;
+}
