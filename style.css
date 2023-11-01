@@ -207,6 +207,13 @@ nav li a {
     font-size: 32px;
     margin-right: 5px;
 }
+/* DASHBOARD */
+
+.welcome-user{
+    margin: 20px;
+    font-weight: 200;
+    font-size: 20px;
+}
 
 /* EXPERIENCE */
 
@@ -309,17 +316,89 @@ nav li a {
     margin-bottom: 10px;
 }
 
+/*contact*/
+
 #from {
     display: flex;
     justify-content: center;
-
 }
 
 .from-box {
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 0 25px 0 25px;
+    background: white;
     width: 50%;
+    max-width: 400px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
 }
 
-/*contact*/
+
+.col-form-contact{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.col-form-delete{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.col-form-delete button{
+    width: 100%;
+}
+
+form div > label {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+    background: #47474717;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    border: 1px solid;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.from-control-contact{
+    height: 40px;
+}
+
+.text-area-contact{
+    height: 200px;
+}
+
+.from-group{
+    display: flex;
+    flex-direction: column;
+}
+
+form button {
+    height: 60px;
+    font-weight: 700;
+    font-size: 28px;
+    background: white;
+    border: rgba(48, 48, 48, 0.5) solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    color: #303030;
+}
+form button:hover {
+    background: #f0f0f0; /* Couleur de fond plus sombre lorsque survolé */
+}
+
+form button:active {
+    transform: translateY(2px); /* Enfonce le bouton de 2 pixels vers le bas lorsqu'il est cliqué */
+}
 
 .error-sendmail {
     color: red;
@@ -328,3 +407,31 @@ nav li a {
 .success-sendmail {
     color: red;
 }
+
+/*ajout*/
+
+.col-form-ajout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+.from-control-ajout{
+    height: 40px;
+}
+
+.col-form-modif{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.text-area-modif{
+    height: 100px;
+}
+
+
+

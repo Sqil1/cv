@@ -16,31 +16,29 @@
     <div id="from">
         <div class="from-box">
             <form action="post_contact.php" method="POST">
-                <div class="row">
-                    <div class="col">
+                <div class="row-form-contact">
+                    <div class="col-form-contact">
                         <div class="from-group">
-                            <label for="inputname">Nom</label>
-                            <input type="text" name="name" class="from-control" id="inputname">
+                            <label for="inputname">Nom :</label>
+                            <input type="text" name="name" class="from-control-contact" id="inputname">
                         </div>
-                        <div class="col">
-                            <div class="from-group">
-                                <label for="inputemail">Email</label>
-                                <input type="text" name="email" class="from-control" id="inputemail">
-                            </div>
+                        <div class="from-group"">
+                            <label for="inputemail">Email :</label>
+                            <input type="text" name="email" class="from-control-contact" id="inputemail">
                         </div>
-                        <div class="cal">
-                            <div class="fromgroupe">
-                                <label for="inputmessage">Votre message</label>
-                                <textarea name="message" id="inputmessage" class="" cols="30" rows="10"></textarea>
-                            </div>
-                            <?php if (isset($_GET['sendmail']) && $_GET['sendmail'] == 'error'): ?>
-                                <p class="error-sendmail">Erreur</p>
-                            <?php endif ?>
-                            <button type="submit" name="send" class="btn">Envoyer</button>
+                        <div class="from-group">
+                            <label for="inputmessage">Votre message :</label>
+                              <textarea name="message" id="inputmessage" class="text-area-contact" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="from-group">
+                        <?php if (isset($_GET['sendmail']) && $_GET['sendmail'] == 'error'): ?>
+                            <p class="error-sendmail">Erreur</p>
+                        <?php endif ?>
+                        <button type="submit" name="send" class="btn">Envoyer</button>
                         </div>
                     </div>
+                </div>
             </form>
-
         </div>
     </div>
 </section>

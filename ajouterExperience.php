@@ -52,38 +52,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="title">
         <h2>Ajouter une expérience</h2>
     </div>
-    <form action="" method="post" enctype="multipart/form-data">
-        <ul>
-            <?php
-            foreach ($errors as $error) {
-                echo "<li>$error</li>";
-            }
-            ?>
-        </ul>
-        <div class="">
-            <label for="poste">Poste</label>
-            <input type="text" id="poste" name="poste" value="<?= $poste ?>"></div>
-        <div class="">
-            <label for="employeur">Employeur</label>
-            <input type="text" id="employeur" name="employeur"><?= $employeur ?></input>
+    <div id="from">
+        <div class="from-box">
+            <form action="" method="post" enctype="multipart/form-data">
+                <ul>
+                    <?php
+                    foreach ($errors as $error) {
+                        echo "<li>$error</li>";
+                    }
+                    ?>
+                </ul>
+                <div class="row-form-ajout">
+                    <div class="col-form-ajout">
+                        <div class="from-group">
+                            <label for="poste">Poste</label>
+                            <input type="text" id="poste" name="poste" class="from-control-ajout" value="<?= $poste ?>"></div>
+                        <div class="from-group">
+                            <label for="employeur">Employeur</label>
+                            <input type="text" id="employeur" name="employeur" class="from-control-ajout"><?= $employeur ?></input>
+                        </div>
+                        <div class="from-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" class="from-control-ajout"><?= $description ?></textarea>
+                        </div>
+                        <div class="from-group">
+                            <label for="date_debut">Date de début</label>
+                            <input type="date" id="date_debut" name="date_debut" class="from-control-ajout"><?= $dateDebutExperience ?></input>
+                        </div>
+                        <div class="from-group">
+                            <label for="date_fin">Date de fin</label>
+                            <input type="date" id="date_fin" name="date_fin" class="from-control-ajout"><?= $dateFin ?></input>
+                        </div>
+                        <div class="from-group">
+                            <button type="submit" class="button" name="submitExperience">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="">
-            <label for="description">Description</label>
-            <textarea id="description" name="description"><?= $description ?></textarea>
-        </div>
-        <div class="">
-            <label for="date_debut">Date de début</label>
-            <input type="date" id="date_debut" name="date_debut"><?= $dateDebutExperience ?></input>
-        </div>
-        <div class="">
-            <label for="date_fin">Date de fin</label>
-            <input type="date" id="date_fin" name="date_fin"><?= $dateFin ?></input>
-        </div>
-        <div class="inset">
-            <button type="submit" class="button" name="submitExperience">Ajouter</button>
-        </div>
-
-    </form>
+    </div>
 </section>
 
 

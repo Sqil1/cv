@@ -3,13 +3,13 @@
 require_once 'header.php';
 require_once 'functions.php';
 
-
 if (isUserAuthenticated()) {
     // L'utilisateur est connecté, affichez le message de bienvenue
     $user = $_SESSION["user"];
-    echo "Bienvenue, $user!";
+    $user = ucfirst($user);
+    echo "<div class=\"welcome-user\">Bienvenue, $user!</div>";
 } else {
-    // L'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    // L"utilisateur n'est pas connecté, redirigez-le vers la page de connexion
     header("Location: meConnecter.php");
     exit();
 }

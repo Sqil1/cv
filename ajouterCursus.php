@@ -52,38 +52,51 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="title">
         <h2>Ajouter un Cursus</h2>
     </div>
-    <form action="" method="post" enctype="multipart/form-data">
-        <ul>
-            <?php
-            foreach ($errors as $error) {
-                echo "<li>$error</li>";
-            }
-            ?>
-        </ul>
-        <div class="">
-            <label for="diplome">Diplome</label>
-            <input type="text" id="diplome" name="diplome" value="<?= $diplome ?>"></div>
-        <div class="">
-            <label for="ecole">Ecole</label>
-            <input type="text" id="ecole" name="ecole"><?= $ecole ?></input>
+    <div id="from">
+        <div class="from-box">
+            <form action="" method="post" enctype="multipart/form-data">
+                <ul>
+                    <?php
+                    foreach ($errors as $error) {
+                        echo "<li>$error</li>";
+                    }
+                    ?>
+                </ul>
+                <div class="row-form-ajout">
+                    <div class="col-form-ajout">
+                        <div class="from-group">
+                            <label for="diplome">Diplome</label>
+                            <input type="text" id="diplome" name="diplome" class="from-control-ajout"
+                                   value="<?= $diplome ?>"></div>
+                        <div class="from-group">
+                            <label for="ecole">Ecole</label>
+                            <input type="text" id="ecole" name="ecole" class="from-control-ajout"><?= $ecole ?></input>
+                        </div>
+                        <div class="from-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description"
+                                      class="from-control-ajout"><?= $description ?></textarea>
+                        </div>
+                        <div class="from-group">
+                            <label for="date_debut">Date de début</label>
+                            <input type="date" id="date_debut" name="date_debut"
+                                   class="from-control-ajout"><?= $dateDebut ?></input>
+                        </div>
+                        <div class="from-group">
+                            <label for="date_fin">Date de fin</label>
+                            <input type="date" id="date_fin" name="date_fin"
+                                   class="from-control-ajout"><?= $dateFin ?></input>
+                        </div>
+                        <div class="from-group">
+                            <button type="submit" class="button" name="submitCursus" class="from-control-ajout">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="">
-            <label for="description">Description</label>
-            <textarea id="description" name="description"><?= $description ?></textarea>
-        </div>
-        <div class="">
-            <label for="date_debut">Date de début</label>
-            <input type="date" id="date_debut" name="date_debut"><?= $dateDebut ?></input>
-        </div>
-        <div class="">
-            <label for="date_fin">Date de fin</label>
-            <input type="date" id="date_fin" name="date_fin"><?= $dateFin ?></input>
-        </div>
-        <div class="inset">
-            <button type="submit" class="button" name="submitCursus">Ajouter</button>
-        </div>
-
-    </form>
+    </div>
 </section>
 
 

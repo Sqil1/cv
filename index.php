@@ -13,9 +13,7 @@
                 un domaine professionnel où je saurai m'épanouir tout en mettant à profit les compétences et les
                 qualités humaines acquises jusqu'ici.</p>
         </div>
-
     </div>
-
 </section>
 <?php require_once 'experiences.php'; ?>
 <?php require_once 'cursus.php'; ?>
