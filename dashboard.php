@@ -13,6 +13,7 @@ if (isUserAuthenticated()) {
     header("Location: meConnecter.php");
     exit();
 }
+// message de suppression à faire
 require_once 'experiences.php';
 require_once 'ajouterExperience.php';
 require_once 'cursus.php';

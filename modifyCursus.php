@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
 
             header("Location: dashboard.php");
         } catch (PDOException $e) {
-            echo "Erreur lors de la mise à jour : " . $e->getMessage();
+            throw new Exception("Erreur lors de la mise à jour : " . $e->getMessage());
         }
     } else {
         $bdd = connect();

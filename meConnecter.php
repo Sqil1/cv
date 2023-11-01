@@ -32,18 +32,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Connexion</title>
 </head>
 <body>
-<h2>Connexion</h2>
-<?php if (isset($error_message)) {
-    echo "<p style='color: red;'>$error_message</p>";
-} ?>
-<form action="meConnecter.php" method="post">
-    <label for="user">Nom d'utilisateur :</label>
-    <input type="text" name="user" id="user" required><br><br>
-
-    <label for="password">Mot de passe :</label>
-    <input type="password" name="password" id="password" required><br><br>
-
-    <input type="submit" value="Se connecter">
-</form>
+<section id="contact">
+    <div class="title">
+        <h2>Me contacter</h2>
+    </div>
+    <?php if (isset($error_message)) {
+        echo "<p style='color: red;'>$error_message</p>";
+    } ?>
+    <div id="from">
+        <div class="from-box">
+            <form action="meConnecter.php" method="post">
+                <div class="row-form-contact">
+                    <div class="col-form-contact">
+                        <div class="from-group">
+                            <label for="user">Nom d'utilisateur :</label>
+                            <input type="text" name="user" id="user" class="from-control-contact" required>
+                        </div>
+                        <div class="from-group">
+                            <label for="password">Mot de passe :</label>
+                            <input type="password" name="password" id="password" class="from-control-contact" required>
+                        </div>
+                        <button type="submit">Se connecter</button>
+            </form>
 </body>
 </html>

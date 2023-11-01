@@ -10,9 +10,9 @@ function connect()
     try {
         $bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $bdd; // Retourne l'objet PDO
+        return $bdd;
     } catch (PDOException $exception) {
-        die("Erreur : " . $exception->getMessage());
+        throw new Exception("Erreur : " . $exception->getMessage());
     }
 }
 

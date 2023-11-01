@@ -2,7 +2,7 @@
 // Démarrez la session
 session_start();
 
-// Détruisez toutes les variables de session
+// Destruction des variables de session
 session_unset();
 
 // Détruisez la session

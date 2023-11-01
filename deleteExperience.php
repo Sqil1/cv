@@ -15,6 +15,6 @@ if (isset($_POST['confirm_delete']) && isset($_POST['id'])) {
         header("Location: dashboard.php");
 
     } catch (PDOException $e) {
-        echo "Erreur lors de la suppression de l'expérience : " . $e->getMessage();
+        throw new Exception("Erreur lors de la suppression du cursus : " . $e->getMessage());
     }
 }

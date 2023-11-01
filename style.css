@@ -35,6 +35,7 @@ section h2 {
 }
 
 
+
 body {
     font-family: "roboto-regular";
 }
@@ -65,6 +66,7 @@ nav {
 nav ul {
     list-style-type: none;
     font-family: "roboto-medium";
+    z-index: 1;
 }
 
 nav li {
@@ -276,6 +278,7 @@ nav li a {
     flex-direction: column;
     max-width: 800px;
     margin: auto;
+    z-index: 0;
 }
 
 .cursus {
